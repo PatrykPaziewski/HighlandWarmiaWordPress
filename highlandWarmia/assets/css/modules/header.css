@@ -1,0 +1,21 @@
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .04538em;
+    text-transform: uppercase;
+    transition: .3s;
+    background-color: beige;
+}
+
+.site-logo.header-image {
+    width: 140px;
+    height: 140px;
+    margin-right: -70px;
+}

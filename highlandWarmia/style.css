@@ -1,0 +1,16 @@
+/* 
+Theme Name: Highland Warmia
+Text Domain: HighlandWarmia
+Version: 1.0
+Description: Highland Warmia theme
+Tags: Responsive, new, HighlandWarmia
+Author: Patryk Paziewski
+Author URI: https://specodit.pl
+*/
+@import "./assets/css/style.css";
+
+
+
+body {
+    background-color: black;
+}
