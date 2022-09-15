@@ -1,4 +1,6 @@
-#header {
+/* głowne */
+
+#header { 
     position: fixed;
     display: flex;
     justify-content: center;
@@ -12,10 +14,88 @@
     text-transform: uppercase;
     transition: .3s;
     background-color: beige;
+    font-family: 'Monsterat', sans-serif;
 }
+
+/* logo */
 
 .site-logo.header-image {
     width: 140px;
     height: 140px;
     margin-right: -70px;
+    background: url("highlandwarmia.local");
+}
+
+/* menu główme */
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 100px !important;
+    padding-left: 100px !important;
+    flex-direction: row;
+    grid-auto-columns: "max-content";
+    grid-column-gap: 30px;
+}
+/*
+.menu:hover > ul{
+    display: block;
+}
+*/
+
+.menu a:hover .sub-menu{
+    display: block;
+}
+
+/* menu rozwijane */
+
+a:hover {
+    outline: 0;
+    color: green;
+}
+
+/*
+ul li:hover ul
+{
+    display: block;
+}
+*/
+
+a {
+    text-decoration: none;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    opacity: 0%;
+    padding-bottom: 20px;
+    pointer-events: none;
+    padding-top: 30px;
+    opacity: 0;
+    width: 220px;
+
+}
+
+.sub-menu ul li :first-of-type {
+    padding-top: 20px;
+}
+.sub-menu ul.menu ul li {
+    background-color: #134818;
+}
+.sub-menu ul li ul li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
 }
