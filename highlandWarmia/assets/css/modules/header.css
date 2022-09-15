@@ -39,7 +39,9 @@
     grid-column-gap: 30px;
 }
 
-.menu li:hover .sub-menu{
+.menu li:hover .sub-menu,
+.menu .sub-menu:hover
+{
     opacity: 1;
 }
 
@@ -61,6 +63,7 @@ a {
     padding-bottom: 20px;
     pointer-events: none;
     padding-top: 30px;
+    padding-left: 0;
     opacity: 0;
     width: 220px;
 
