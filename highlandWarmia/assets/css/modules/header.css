@@ -19,7 +19,7 @@
 
 /* logo */
 
-.site-logo.header-image {
+.header .site-logo.header-image {
     width: 140px;
     height: 140px;
     margin-right: -70px;
@@ -52,10 +52,9 @@
     transform: translateX(-50%);
 }
 
-.menu li:hover .sub-menu,
-.menu .sub-menu:hover
+.menu li:hover .sub-menu
 {
-    opacity: 1;
+    display: block;
 }
 
 .menu li.menu-item-has-children > a::after
@@ -93,13 +92,13 @@ a:visited {
     pointer-events: none;
     padding-top: 30px;
     padding-left: 0;
-    opacity: 0;
+    display: none;
     width: 220px;
     text-align: center;
     background-color: #134818;
     text-decoration: none;
-    transform: translateX(-25%) translateY(15px);
-    transition: transform .2s, opacity .2s;
+    transform: translateX(-25%) translateY(40px);
+    transition: 0.2s;
     line-height: 2.5;
     font-weight: 400;
 }
@@ -130,5 +129,35 @@ a:visited {
     border-right: 5px solid transparent;
     border-bottom: 5px solid black;
     object-position: inherit;
-  }
+}
 
+@media only screen and (max-width: 1200px) {
+    #header{
+        display: none;
+    }
+    
+    #mobile-header {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #header{
+        display: flex;
+    }
+    
+    #mobile-header {
+        display: none;
+    }
+}
+
+.mobile-header .menuToggle .menu {
+    display: none
+}
+
+.mobile-header .site-logo.header-image{
+    width: 140px;
+    height: 140px;
+    margin-right: 50%;
+    background: url("highlandwarmia.local");
+}
