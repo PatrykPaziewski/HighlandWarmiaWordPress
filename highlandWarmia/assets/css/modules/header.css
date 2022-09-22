@@ -28,7 +28,7 @@
 
 /* menu główme */
 
-.menu {
+.header .menu {
     display: flex;
     align-items: center;
     width: 100%;
@@ -76,11 +76,11 @@ a {
     text-decoration: none;
 }
 
-a:link {
+.header a:link {
     color: white;
 }
 
-a:visited {
+.header a:visited {
     color: white;
 }
 
@@ -151,13 +151,84 @@ a:visited {
     }
 }
 
-.mobile-header .menuToggle .menu {
-    display: none
+/* menu mobilne */
+
+.mobile-header a:link {
+    color: black;
+}
+
+.mobile-header a:visited {
+    color: black;
 }
 
 .mobile-header .site-logo.header-image{
     width: 140px;
     height: 140px;
-    margin-right: 50%;
     background: url("highlandwarmia.local");
+    padding-left: 30%;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+    margin: -4px;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #000;
+}
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#mobile-header #menuToggle #menu .menu .menu-item{
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+}
+
+.mobile-header .menu-mobilne {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    text-align: left;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform .4s;
+}
+
+.mobile-header .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: -0;
+    margin-top: 100px;
+    line-height: 2.5;
 }

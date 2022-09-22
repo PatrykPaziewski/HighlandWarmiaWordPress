@@ -6,7 +6,13 @@
 <div id="mobile-header" class="mobile-header">
     <div id="menuToggle">
         <input type="checkbox" />
-        <ul id="menu">
+        <span class="exit"></span>
+        <span class="exit"></span>
+        <span class="exit"></span>
+        <ul id="menu" class="menu-mobilne">
+            <div class="menu-background">
+
+            </div>
             <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'HeaderMobile')); ?>
         </ul>
     </div>
