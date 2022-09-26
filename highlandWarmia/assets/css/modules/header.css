@@ -13,7 +13,6 @@
     letter-spacing: .04538em;
     text-transform: uppercase;
     transition: .3s;
-    background-color: blue;
     font-family: 'Monsterat', sans-serif;
 }
 
@@ -23,7 +22,6 @@
     width: 140px;
     height: 140px;
     margin-right: -70px;
-    background: url("highlandwarmia.local");
 }
 
 /* menu główme */
@@ -39,7 +37,7 @@
     grid-column-gap: 30px;
 }
 
-.sub-menu:first-of-type::before {
+.sub-menu li:first-of-type::before {
     content: '';
     display: block;
     position: absolute;
@@ -54,7 +52,8 @@
 
 .menu li:hover .sub-menu
 {
-    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .menu li.menu-item-has-children > a::after
@@ -76,37 +75,53 @@ a {
     text-decoration: none;
 }
 
-.header a:link {
+#header.sticky {
+    height: 60px;
+    background: #fff;
+    margin-top: 0;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+
+.header a:link,
+.header a:visited,
+#header.sticky .menu-header ul.sub-menu li a {
     color: white;
 }
 
-.header a:visited {
-    color: white;
+#header.sticky .menu-header ul li a,
+#header.sticky .menu li.menu-item-has-children > a::after {
+    color: rgb(0, 0, 0);
+}
+
+#header ul li a {
+    display: block;
+    padding: 10px 19px;
 }
 
 .sub-menu {
     position: absolute;
     top: 100%;
-    left: 0%;
+    left: 50%;
     padding-bottom: 20px;
     pointer-events: none;
     padding-top: 30px;
     padding-left: 0;
-    display: none;
+    opacity: 0;
     width: 220px;
     text-align: center;
-    background-color: #134818;
     text-decoration: none;
-    transform: translateX(-25%) translateY(40px);
+    transform: translateX(-50%) translateY(15px);
+    transition: transform .2s, opacity .2s;
     transition: 0.2s;
     line-height: 2.5;
     font-weight: 400;
+    z-index: 9999;
 }
 
-.sub-menu ul li :first-of-type {
+.sub-menu li:first-of-type {
     padding-top: 20px;
 }
-.sub-menu ul.menu ul li {
+.sub-menu li {
     background-color: #134818;
 }
 
@@ -264,3 +279,4 @@ a {
     margin-top: 90px;
     line-height: 2.5;
 }
+
