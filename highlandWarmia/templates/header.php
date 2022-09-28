@@ -1,6 +1,11 @@
 <div id="header" class="header">
 	<?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'headerLeft')); ?>
-	<img class="site-logo header-image" src="<?php echo (get_theme_file_uri("/assets/images/site-logo.png")); ?>" />
+	<a href="http://highlandwarmia.local/">
+		<img class="site-logo header-image first" src="<?php echo (get_theme_file_uri("/assets/images/site-logo.png")); ?>">
+	</a>
+	<a href="http://highlandwarmia.local/">
+		<img class="site-logo header-image second" src="<?php echo (get_theme_file_uri("/assets/images/nowe-logo-2.png")); ?>">
+	</a>
 	<?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'headerRight')); ?>
 </div>
 <div id="mobile-header" class="mobile-header">
